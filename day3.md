@@ -19,7 +19,7 @@ void swap(int* x, int* y) {
 }
 ```
 
-```assembler
+```assembly
 @ arm assembly
 
 .text
@@ -47,7 +47,7 @@ int func(int a, int b) {
 ```
 
 Now to assembly code. Note that a lot of these lines aren't necessary, they're just to show features of arm.
-```assembler
+```assembly
 .text
 .global func
 
