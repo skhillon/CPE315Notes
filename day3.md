@@ -19,7 +19,7 @@ void swap(int* x, int* y) {
 }
 ```
 
-```ARM
+```assembler
 @ arm assembly
 
 .text
@@ -46,6 +46,30 @@ int func(int a, int b) {
 }
 ```
 
+Now to assembly code. Note that a lot of these lines aren't necessary, they're just to show features of arm.
+```assembler
+.text
+.global func
 
+func:
+    add sp, sp, #-4     @ Move stack pointer up by 4 bytes (32-bit)
+    str lr, [sp]
+    sub sp, sp, #12     @ Notice you don't need to say r13, can say sp. 
+    str r0, [sp, #4]
+    add r3, sp, #8
+    str r1, [r3, #-8]!  @ Exclamation is the same thing as `ttx;`, which modifies r3 in place (performs a transformation on an operand) and then stores into r1.
+    mov r1, r3
+    add r0, sp, #4      @ Move sp down another int width.
+    bl swap             @ Branch and (???) to swap.
+    ldr r1, [sp]
+    ldr r0, [sp, #4]
+    bl sum
+    add sp, sp #12
+    ldr pc, [sp], #4   @ Loading directly into PC, allowed. The `[sp], #4` part is the same as `x++`.
+```
 
+- Need to push link register onto stack whenever you call a function.
+- Needed to push a and b onto stack, get their addresses, put those into registers so it can perform swap.
+- After swap, had to get values off stack, put them into registers to call sum function.
+- Then, had to pop off temporary information, pop off saved PC into the PC itself and then return.
 
