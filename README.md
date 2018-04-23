@@ -1,6 +1,4 @@
 # Class Notes for 315 Lupo
 by Sarthak Khillon.
 
-## Note
-Day 1 had nothing.
-Missed day 2.
+`merged.md` contains all the notes combined into one file.
