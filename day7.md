@@ -1,5 +1,4 @@
-# Performance Optimization
-Monday, April 16, 2018
+# Day 7 -- Performance Optimization -- Monday, April 16
 
 ## Definitions
 - Performance is in units of things-per-time (mph, MB/s). Bigger is better.

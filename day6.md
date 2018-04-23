@@ -1,4 +1,4 @@
-# Friday, April 13 -- Day 6
+# Day 6 -- Friday, April 13
 
 ## Overflow
 Is a thing. Sign overflow happens. Can't have overflow if pos + negative, can if same sign.
