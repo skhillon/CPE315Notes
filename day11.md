@@ -38,5 +38,5 @@ Now let's examine the cycles.
 Notice how `add` stores the result in r1, and then `sub` uses that result to do its own operation. However, if you were to pipeline like in the table above, r1 would not be updated for `sub`. *This is called a DATA HAZARD*, or a *read-after-write* hazard. Common hazard on RISC architecture like ARM.
 
 What's the solution?
-- HARDWARE-BASED: Pause the execute (computing) instruction and insert "stall cycles" (copies of the execute phase to fill cycles until the previous instruction is done).
+- HARDWARE-BASED: Pause the execute (computing) instruction and insert "stall cycles" (copies of the execute phase to fill cycles until the previous instruction is done). This method will fix any kind of data hazard and is very safe, but it's barely any faster and kind of a "waste" of pipelining. You're essentially just waiting slightly less than a synchronous solution.
 - SOFTWARE-BASED: 
