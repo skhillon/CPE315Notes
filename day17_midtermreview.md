@@ -8,7 +8,7 @@ TBH I missed most of the quiz review lmao
 SH      ALU     SAT     WB
 ADDR    M1      M2      WB
 
-``assembly
+```assembly
 ldr     r1, [r2, #0]
 ldr     r3, [r1, #3]
 add     r0, r3, #4
@@ -31,7 +31,7 @@ Noice. 100%.
 ### Q3 (RIP)
 With size=10, you're gonna go through the inner loop 100 times and outer loop 10 times.
 
-So it's going to be 10(9*inner + 1 miss (x6)) 
+So it's going to be 10(9xinner + 1 miss (x6)) 
 
 - The more iterations you have, the branch mispredicts become a smaller percentage of the whole instructions, and the CPI converges as n->\inftyy
 - Assumption on loops is that it will always go back up instead of going down.
