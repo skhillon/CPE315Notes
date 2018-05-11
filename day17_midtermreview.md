@@ -35,5 +35,5 @@ With size=10, you're gonna go through the inner loop 100 times and outer loop 10
 
 So it's going to be 10(9xinner + 1 miss (x6)) 
 
-- The more iterations you have, the branch mispredicts become a smaller percentage of the whole instructions, and the CPI converges as n->\inftyy
+- The more iterations you have, the branch mispredicts become a smaller percentage of the whole instructions, and the CPI converges as n->\infty
 - Assumption on loops is that it will always go back up instead of going down.
