@@ -5,8 +5,10 @@ TBH I missed most of the quiz review lmao
 
 ## Pipeline stuff (See 16.2 for table)
 **The following are in separate pipelines, but may end up writing to the same registers. Requires locks.**
-SH      ALU     SAT     WB
-ADDR    M1      M2      WB
+
+ARITHMETIC: SH      ALU     SAT     WB
+
+LOAD/STORE: ADDR    M1      M2      WB
 
 ```assembly
 ldr     r1, [r2, #0]
