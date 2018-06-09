@@ -1,5 +1,5 @@
 # Professor Lupo Final Review Session - June 9, 2018
-Content is also in BUS 310 section of paper notes and in Toby tabs
+Content is also in CHEMISTRY section of paper notes and in Toby tabs
 
 ## 3a) See paper notes
 
